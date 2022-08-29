@@ -1,0 +1,14 @@
+
+version: "3.9"
+
+services:
+  workplanner-api:
+    container_name: workplanner-api
+    build: server/
+    # image: workplanner-api
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./server/:/home/server
+
+    
