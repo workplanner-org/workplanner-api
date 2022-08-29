@@ -1,23 +1,18 @@
 
-FROM ubuntu:20.04
+FROM gradle:jdk17
 USER root
-
+RUN cd /
 ######################
 # Creating location for mount volume
 ######################
-RUN mkdir home/server
-
-######################
-# Installing Java
-######################
-RUN apt-get update \
-    apt-get upgrade \ 
-    apt install openjdk-17-jdk openjdk-17-jre
-
+RUN mkdir /home/server
 
 WORKDIR /home/server
 COPY . .
+WORKDIR /home/server/workplanner
 
 #changing permissions is not necessary
 # RUN chmod 755 /home/server/entrypoint.sh
+
+
 ENTRYPOINT ["/home/server/entrypoint.sh"] 
