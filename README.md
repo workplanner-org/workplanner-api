@@ -14,16 +14,6 @@ Workplanner Application API
 
 2. Once cloned, open the Repo in visual studio code and run :
 ```bash 
-docker-compose up --build -d
+docker-compose up
 ```
-
-3. Once your container is running, get into it by running :
-```bash
-docker-exec -it workplanner-api /bin/sh
-```
-
-4. Now you can view the inside of the container and run any unix based commands that you wish. 
- -- start with `ls` to make sure that you are in the project folder
- -- run the web api with : `./gradlew bootRun`
- 
  
