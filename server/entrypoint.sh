@@ -1,10 +1,13 @@
 #!/bin/bash
+echo "building the app..."
+echo $PWD
+# building the app
 
-echo "hello world"
-
-echo "running app continuously..."
-
-while true;
-do
-sleep 1
-done
+if ./gradlew build ; then 
+    echo "!!!App built successfully!!!"
+    # running the app
+    echo "running the app..."
+    ./gradlew bootRun
+else 
+    echo "... Build Failed ..."
+fi
