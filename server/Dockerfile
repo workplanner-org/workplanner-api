@@ -9,6 +9,9 @@ RUN mkdir /home/server
 
 WORKDIR /home/server
 COPY . .
-WORKDIR /home/server/workplanner
+
+RUN chmod 111 ./entrypoint.sh 
+
+WORKDIR /home/server/workplanner 
 
 ENTRYPOINT ["/home/server/entrypoint.sh"] 
