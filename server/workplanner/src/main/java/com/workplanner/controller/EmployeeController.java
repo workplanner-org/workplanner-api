@@ -16,7 +16,7 @@ import com.workplanner.model.Employee.EmployeeRepository;
 
 @Controller
 @RequestMapping(path = "/employees")
-// @CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin
 public class EmployeeController {
     
     @Autowired
