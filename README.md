@@ -12,8 +12,20 @@ Workplanner Application API
  ssh  : git clone git@github.com:workplanner-org/workplanner-api.git
 ```
 
-2. Once cloned, open the Repo in visual studio code and run :
+##### Verification of access rights for the files
+2. take a look at the permissions of your files in the system
+```bash
+ls -l
+```
+***Do this for both the `entryfile.sh` and `server/gradlew`.***
+if you see that you don't have execute rights for these files, change the permissions to enable execution. You can do this with :
+```bash
+chmod 777 ./filepath
+```
+
+
+3. Once cloned, open the Repo in visual studio code and run :
 ```bash 
-docker-compose up
+docker-compose up --build
 ```
  
