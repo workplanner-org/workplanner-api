@@ -1,3 +1,6 @@
+### application properties ###
+application.properties
+
 HELP.md
 .gradle
 build/
@@ -37,6 +40,4 @@ out/
 .vscode/
 
 
-### application properties ###
 
-.properties
